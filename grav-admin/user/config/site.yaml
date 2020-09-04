@@ -1,0 +1,19 @@
+title: 'Asociación Civil Apu Kuntur'
+default_lang: es
+author:
+  name: betojaton
+  email: info@betojaton.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Organización sin fines de lucro comprometida en ayudar a transformar el mundo en que vivimos, creando  y apoyando proyectos de triple impacto.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects: null
+routes: null
+blog:
+  route: /blog
