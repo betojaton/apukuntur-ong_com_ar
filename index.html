@@ -34,13 +34,18 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
 	<link rel="stylesheet" href="css/hero.css">
 	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.carousel-item {
+			transition: transform 2s ease, opacity .5s ease-out;
+		}
+	</style>
 
 </head>
 <body>
 	<header class="header overflow-hidden text-primary" id="top">
 		<div class="row text-center">
-			<div class="col-4 col-lg-3 offset-0 text-center">
-				<img class="img-fluid m-2" data-aos="zoom-in" src="assets/img/AKP-logo-sin_fondo.png" width="220px" alt="Logotipo">
+			<div class="col-4 col-lg-3 offset-0 text-center py-md-3">
+				<img class="img-fluid m-2" data-aos="zoom-in" src="assets/img/AKP-logo-sin_fondo.png" alt="Logotipo" style="max-width: 158px;">
 			</div>
 			<div class="col-8">
 				<div class="row d-lg-flex align-items-center justify-content-lg-center align-items-lg-center border-bottom py-3">
@@ -48,10 +53,18 @@
 						<p><i class="fa fa-map-marker fa-2x" title="icono map-marker"></i> Meirovich 40, La Falda, Córdoba</p>
 					</div>
 					<div class="col-4 col-md text-center">
-						<a href="https://www.instagram.com/asociacioncivil_apukuntur/" title="Visítenos en Instagram" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram fa-2x"></i></a><a href="https://www.facebook.com/AsociacionCivil.ApuKuntur" target="_blank" rel="noopener noreferrer" title="Visítenos en Instagram"><i class="fa fa-facebook-square fa-2x ml-sm-2 ml-1"></i></a>
+						<a href="https://www.instagram.com/asociacioncivil_apukuntur/" title="Visítenos en Instagram" target="_blank" rel="noopener noreferrer">
+							<i class="fa fa-instagram fa-2x"></i>
+						</a>
+						<a href="https://www.facebook.com/AsociacionCivil.ApuKuntur" target="_blank" rel="noopener noreferrer" title="Visítenos en Instagram">
+							<i class="fa fa-facebook-square fa-2x ml-sm-2 ml-1"></i>
+						</a>
+						<a href="#" target="_blank" rel="noopener noreferrer" title="Visítenos en Twitter">
+							<i class="fa fa-twitter fa-2x ml-sm-2 ml-1"></i>
+						</a>
 					</div>
 					<div class="col-8 col-md text-sm-center">
-						<button class="btn bg-green-dark btn-lg mr-md-3 rounded-pill px-md-5" type="button" disabled>DONAR</button>
+						<!-- <button class="btn bg-green-dark btn-lg mr-md-3 rounded-pill px-md-5" type="button" disabled>DONAR</button> -->
 					</div>
 				</div>
 				<div class="row">
@@ -61,8 +74,8 @@
 							<div class="collapse navbar-collapse text-center"
 							id="navcol-1">
 							<ul class="nav navbar-nav navbar-ppal">
-								<li class="nav-item" role="presentation"><a class="nav-link active" href="#mision">LA FUNDACION</a></li>
-								<li class="nav-item" role="presentation"><a class="nav-link" href="#proyectos">PROYECTOS</a></li>
+								<li class="nav-item" role="presentation"><a class="nav-link active" href="#mision">LA ASOCIACION</a></li>
+								<li class="nav-item" role="presentation"><a class="nav-link" href="#proyectos">PROGRAMAS</a></li>
 								<li class="nav-item" role="presentation"><a class="nav-link" href="#">COMO AYUDARNOS?</a></li>
 								<li class="nav-item" role="presentation"><a class="nav-link" href="#noticias">NOTICIAS</a></li>
 								<li class="nav-item" role="presentation"><a class="nav-link" href="#colaboran">COLABORAN</a></li>
@@ -83,15 +96,28 @@
     <section class="container-fluid mt-n4 hero">
     	<div class="row">
     		<div class="col-md-4 text-center text-md-right ml-auto">
-    			<div class="intro">
-    				<h1 class="mb-3">Somos Triple Impacto</h1>
-    				<p class="text-dark border-bottom pb-3">Somos una Organización sin fines de lucro comprometida en ayudar a transformar el mundo en que vivimos, creando&nbsp; y apoyando proyectos de triple impacto.</p>
+    			<div class="intro pr-md-5" data-aos="fade-right">
+    				<h2 class="mb-3">
+    					Comprometidos con el bienestar actual y de las futuras generaciones.
+    				</h2>
+    				<p class="text-dark border-bottom pb-3 mb-2">Somos una Organización sin fines de lucro comprometida en ayudar a transformar el mundo en que vivimos, creando&nbsp; y apoyando proyectos de triple impacto.</p>
     				<i class="fa fa-chevron-down pr-3 slide-bottom"></i>
     			</div>
     		</div>
-    		<div class="col-md-6">
-    			<div class="d-md-block foto-hero">
-    				<img src="img/foto-hero.svg" alt="Foto Niños sonriendo">
+    		<div class="col-md-6" style="max-height: 392px; overflow: hidden;" data-aos="fade-left">
+    			<div id="carouselTop" class="carousel slide carousel-fade mt-n2" data-ride="carousel">
+    				<div class="carousel-inner">
+    					<div class="carousel-item active">
+    						<img src="img/slide-ambiental.png" class="d-block w-100" alt="Ambiental">
+    					</div>
+    					<div class="carousel-item">
+    						<img src="img/slide-social.png" class="d-block w-100" alt="Social">
+    					</div>
+    					<div class="carousel-item">
+    						<img src="img/slide-economico.png" class="d-block w-100" alt="Economico">
+    					</div>
+    				</div>
+    				
     			</div>
     		</div>
     	</div><!--/row-->
@@ -102,7 +128,7 @@
     <!--===================================
     =            MISION-VISION            =
     ====================================-->
-    <section class="card-group" id="mision">
+    <section class="card-group mt-n5" id="mision">
     	<div class="card border-0 mb-0" data-aos="fade-up" >
     		<article class="card-body bg-dark text-light text-center p-5">
     			<h3 class="card-title text-white pb-md-3">¿QUIENES SOMOS?</h3>
@@ -113,7 +139,7 @@
 			<article class="card border-0 mb-0" data-aos="fade-up" data-aos-delay="100">
 				<div class="card-body bg-green-dark text-light text-center p-5">
 					<h3 class="card-title text-white pb-md-3">¿QUÉ HACEMOS?</h3>
-					<p class="card-text">Ayudamos con ideas, proyectos, capacitaciones, hasta que ésta se transforma en un modelo de emprendimiento sostenible y escalable.</p>
+					<p class="card-text">Ayudamos con ideas, programas, capacitaciones, hasta que ésta se transforma en un modelo de emprendimiento sostenible y escalable.</p>
 					<!--<a class="card-link btn btn-primary btn-lg rounded" href="#">SABER MAS...</a>
 					-->    		
 				</div>
@@ -121,7 +147,7 @@
 			<article class="card border-0 mb-0" data-aos="fade-up" data-aos-delay="200">
 				<div class="card-body bg-yellow-dark text-light text-center p-5">
 					<h3 class="card-title text-white pb-md-3">¿PORQUE LO HACEMOS?</h3>
-					<p class="card-text">Nos moviliza la convicción de que crear y participar en proyectos sostenibles, amigables con el medio ambiente, brindar soluciones a los principales problemas que aquejan a nuestro mundo, con resultados perdurables en el tiempo y posibles de ser replicables en otros lugares.</p>
+					<p class="card-text">Nos moviliza la convicción de que crear y participar en programas sostenibles, amigables con el medio ambiente, brindar soluciones a los principales problemas que aquejan a nuestro mundo, con resultados perdurables en el tiempo y posibles de ser replicables en otros lugares.</p>
 					<!--<a class="card-link btn bg-green-dark btn-lg rounded" href="#">LEER MAS...</a>
 					-->
 				</div>
@@ -135,11 +161,11 @@
     <section class="text-center secc-proyectos py-5 container" id="proyectos">
     	<header class="row py-md-5 " data-aos="fade-up">
     		<div class="col">
-    			<h2 class="mb-5"><small class="border-bottom border-top border-secondary py-1">PROYECTOS<br></small>¿EN QUE ESTAMOS?</h2>
+    			<h2 class="mb-5"><small class="border-bottom border-top border-secondary py-1">PROGRAMAS<br></small>¿EN QUE ESTAMOS?</h2>
     		</div>
     	</header>
     	<div class="card-deck mb-md-5">
-    		<div class="col-md-6 col-lg-4 mb-4 px-md-0">
+    		<div class="col-md-6 col-lg-6 mb-4 px-md-0">
     			<div class="card h-100" data-aos="fade-left">
     				<img class="card-img-top w-100 d-block" alt="Huerta Comunitaria" src="img/thumb-huertacomunitaria.png">
     				<article class="card-body text-left">
@@ -147,12 +173,12 @@
     					<div class="meta-tag small mb-2"><i class="fa fa-tags mr-1 text-muted"></i> Medio Ambiente, Naturaleza, Niños y Adolescentes</div>
     					<p class="card-text mb-md-5">La huerta comunitaria como unidad básica de cambio cultural, las otras dos propuestas son las de impulsar el mercado local horticultor agro ecológico apoyando a los ya existentes y animando a generar nuevos.</p>
     					<button class="btn btn-green rounded-pill px-md-3" type="button">SABER MAS...</button>
-    					<button class="btn btn-secondary rounded-pill" type="button">DONAR</button>
+    					<!-- <button class="btn btn-secondary rounded-pill" type="button">DONAR</button> -->
     				</article>
     			</div>
     		</div>
 
-    		<div class="col-md-6 col-lg-4 mb-4 px-md-0">
+    		<div class="col-md-6 col-lg-6 mb-4 px-md-0">
     			<div class="card h-100" data-aos="fade-left" data-aos-delay="200">
     				<img class="card-img-top w-100 d-block" alt="COESuite" src="img/thumb-coesuite.png">
     				<article class="card-body text-left ">
@@ -160,27 +186,28 @@
     					<div class="meta-tag small mb-2"><i class="fa fa-tags mr-1 text-muted"></i> Salud, COVID-19, Social, Sociedad</div>
     					<p class="card-text mb-md-5">Sistema informático web para el monitoreo de pacientes en aislamiento, obteniendo un mapa vivo con estadísticas a nivel regional.</p>
     					<button class="btn btn-green rounded-pill px-md-3" type="button">SABER MAS...</button>
-    					<button class="btn btn-secondary rounded-pill" type="button">DONAR</button>
+    					<!-- <button class="btn btn-secondary rounded-pill" type="button">DONAR</button> -->
     				</article>
     			</div>
     		</div>
-
+	<!-- 
     		<div class="col-md-6 col-lg-4 mb-4 px-md-0">
     			<div class="card h-100"data-aos="fade-left" data-aos-delay="300" >
     				<img class="card-img-top w-100 d-block" alt="FOTO HC" src="https://imgholder.ru/300x200/2196F3/ECEFF1.jpg&text=LeyDeBosques">
     				<article class="card-body text-left">
-    					<h3 class="text-center card-title">Ley de Bosques</h3>
+    					<h3 class="text-center card-title">En desarrollo..</h3>
     					<div class="meta-tag small mb-2"><i class="fa fa-tags mr-1 text-muted"></i> Medio Ambiente, Naturaleza, Ecología, Niños y Adolescentes</div>
-    					<p class="card-text mb-md-5">Proyecto en desarrollo...</p>
+    					<p class="card-text mb-md-5">Programa en desarrollo...</p>
     					<button class="btn btn-green rounded-pill px-md-3" type="button">SABER MAS...</button>
     					<button class="btn btn-secondary rounded-pill" type="button">DONAR</button>
     				</article>
     			</div>
-    		</div>
+			</div> 
+		-->
 
-    	</div>
-    </section>
-    <!--====  End of PROYECTOS  ====-->
+	</div>
+</section>
+<!--====  End of PROYECTOS  ====-->
 
     <!--==============================
     =            ALIANZAS            =
@@ -192,7 +219,12 @@
     		</div>
     	</header>
     	<div class="row d-flex justify-content-center py-3">
-    		<a href="#"><img src="img/logo-COE.jpg" alt="logo COE"></a><a href="#" class="mx-3"><img src="img/logo-fundacion_gen.png" alt="logo Fundacion Gen"></a><a href="https://plantemiarbol.com.ar/" target="_blank" rel="noopener noreferrer"><img src="img/logo-plante_mi_arbol.png" alt="Sitio Web Plante Mi Arbol"></a>
+    		<a href="#"><img src="img/logo-COE.jpg" alt="logo COE"></a>
+    		<a href="#" class="mx-3"><img src="img/logo-fundacion_gen.png" alt="logo Fundacion Gen"></a>
+    		<a href="https://plantemiarbol.com.ar/" target="_blank" rel="noopener noreferrer"><img src="img/logo-plante_mi_arbol.png" alt="Sitio Web Plante Mi Arbol"></a>
+    		<a href="https://www.lafalda.gob.ar/" target="_blank" rel="noopener noreferrer"><img src="img/logo-la_falda.png" alt="Sitio Web La Falda"></a>
+    		<a href="http://huertagrande.gob.ar/" target="_blank" rel="noopener noreferrer"><img src="img/logo-huerta_grande.png" alt="Sitio Web Huerta Grande"></a>
+    		<a href="https://asaede.org/" target="_blank" rel="noopener noreferrer"><img src="img/logo-asaede.png" alt="Sitio Web Asaede"></a>
     	</div>
     </section>
     <!--====  End of ALIANZAS  ====-->
@@ -205,20 +237,21 @@
     		<h2 class="text-center" data-aos="fade-in" ><small class="border-bottom border-top border-secondary py-1">PERSONAS<br></small>NUESTRO EQUIPO</h2>
     		<p class="text-center w-50 mx-auto" data-aos="fade-in" data-aos-delay="100">Somos un grupo de personas con múltiples intereses y un amor especial por nuestra madre tierra y los seres que la habitan.</p>
     	</header>
+    	
     	<div class="row people" style="max-height: 280px;">
     		<div class="col-md-6 col-lg-3 text-center">
     			<img class="rounded-circle h-25" src="img/foto-diego-soria.webp" alt="Foto Diego Soria" data-aos="zoom-in" data-aos-delay="0">
     			<h3 class="name">Diego Soria</h3>
-    			<p class="title">PRESIDENTE</p>
+    			<p class="title">PROGRAMADOR - ESPECIALISTA EN SISTEMAS GIS</p>
     			<!-- <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p> -->
-    			<div class="social">
+    		<!-- 	<div class="social">
     				<a href="https://www.facebook.com/diego.soria.923" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-official fa-2x mr-3"></i></a>
-    			</div>
+    			</div> -->
     		</div>
     		<div class="col-md-6 col-lg-3 text-center">
     			<img class="rounded-circle h-25" src="img/foto-laura-soria.jpg" alt="Foto Laura Soria" data-aos="zoom-in" data-aos-delay="100">
     			<h3 class="name">Laura Soria</h3>
-    			<p class="title">SECRETARIA</p>
+    			<p class="title">ADMINISTRACION DE PROYECTOS</p>
     			<!-- <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p> -->
                <!--  <div class="social">
                     <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-official fa-2x mr-3"></i></a>
@@ -226,9 +259,9 @@
                 </div> -->
             </div>
             <div class="col-md-6 col-lg-3 text-center">
-            	<img class="rounded-circle h-25" src="https://imgholder.ru/300" alt="Foto Gladis Muriel" data-aos="zoom-in" data-aos-delay="100">
+            	<img class="rounded-circle h-25" src="img/foto-gladis-muriel.jpg" alt="Foto Gladis Muriel" data-aos="zoom-in" data-aos-delay="100">
             	<h3 class="name">Gladis Muriel</h3>
-            	<p class="title">TESORERA</p>
+            	<p class="title">LICENCIADA EN NUTRICIÓN</p>
             	<!-- <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p> -->
                <!--  <div class="social">
                     <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-official fa-2x mr-3"></i></a>
@@ -238,12 +271,22 @@
             <div class="col-md-6 col-lg-3 text-center">
             	<img class="rounded-circle h-25" src="img/foto-beto-jaton.jpg" alt="Foto Roberto Jaton" data-aos="zoom-in" data-aos-delay="300">
             	<h3 class="name">Roberto Jatón</h3>
-            	<p class="title">VOCAL</p>
+            	<p class="title">DISEÑADOR GRAFICO - COMUNNITY MANANGER</p>
             	<!-- <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p> -->
-            	<div class="social">
+     <!--        	<div class="social">
             		<a href="https://www.facebook.com/betojaton" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-official fa-2x mr-3"></i></a>
             		<a href="https://www.instagram.com/beto.jaton/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram fa-2x"></i></a>
-            	</div>
+            	</div> -->
+            </div>
+          <!--  <div class="col-md-6 col-lg-3 text-center">
+            	<img class="rounded-circle h-25" src="img/foto-beto-jaton.jpg" alt="Foto Roberto Jaton" data-aos="zoom-in" data-aos-delay="300">
+            	<h3 class="name">Martin</h3>
+            	<p class="title">-</p>
+            	<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
+             	<div class="social">
+            		<a href="https://www.facebook.com/betojaton" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-official fa-2x mr-3"></i></a>
+            		<a href="https://www.instagram.com/beto.jaton/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram fa-2x"></i></a>
+            	</div> -->
             </div>
         </div>
     </section>
